@@ -5,40 +5,32 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  /* 1 Изменили шрифт на более премиальный и современный */
+    background-color: #fafafa;  /* 2 Сделали более мягкий светлый фон для страницы */
     color: #333;
     line-height: 1.6;
 }
 
 .menu {
-    background-color: #1a1a1a;
+    background-color: #111111;     /* 3 Изменили цвет шапки на глубокий угольно-черный */
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 20px 50px;  /* 4 Увеличили боковые отступы в меню для "воздуха" */
 }
 
 .menu .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 26px;   /* 5 Немного увеличили логотип и добавлен межбуквенный интервал */
+    font-weight: 800;
+    letter-spacing: 2px;
 }
-
-.foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    display: block;
-}
-
-
-
 
 .menu .links a {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 25px;
+    transition: color 0.3s ease;      /* 6 Добавили плавный переход цвета при наведении на ссылки */
 }
 
 .menu .links a:hover {
@@ -46,94 +38,109 @@ body {
 }
 
 .plashka {
-    background-color: #2b2b2b;
+    background-color: #1e1e1e; /* 7 Цвет главного баннера изменили на глубокий графитовый он выглядит получше */
     color: #fff;
-    padding: 50px 30px;
+    padding: 70px 50px;  /* 8 Увеличили вертикальные отступы главного баннера */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .b-text {
     flex: 1;
     min-width: 300px;
-    margin-right: 20px;
 }
 
 .b-text h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 42px;   /* 9 Увеличили размер главного заголовка H1 */
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .secondp {
     font-size: 18px;
-    color: #ccc;
-    margin-bottom: 25px;
+    color: #b3b3b3;  /* 10 Сделали более читаемый цвет подзаголовка */
+    margin-bottom: 30px;
 }
 
 .knopka {
     display: inline-block;
     background-color: #ffcc00;
     color: #1a1a1a;
-    padding: 10px 20px;
+    padding: 12px 28px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;  /* 11 Увеличили скругление кнопки для современного вида */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 12 Добавили плавный эффект изменения фона кнопки */
 }
 
 .knopka:hover {
     background-color: #fff;
 }
 
-.foto img {
+
+.b-foto img, .g-foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: 6px;  /* 13 Удалили дублирующийся селектор .foto img, свойства теперь объединены глобально */
 }
 
 .b-foto {
     width: 500px;
-    height: 330px;
-    flex-shrink: 0;
+    height: 350px;
+    flex-shrink: 0;   /* 14 Скорректировали высоту главного фото для более нормальных пропорций */
 }
 
-
 .blok {
-    padding: 40px 30px;
-    text-align: center;
+    padding: 60px 50px;
+    text-align: center;  /* 15 Увеличили отступы между секциями сайта */
 }
 
 .blok h2 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    position: relative;
 }
 
 .setka {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .tovar {
     background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 250px;
-    border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 25px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.tovar h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.tovar .price {
+    color: #666;
+    font-weight: 500;
 }
 
 .g-foto {
-    width: 300px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
 }
 
 .podval {
-    background-color: #1a1a1a;
-    color: #888;
+    background-color: #111111;
+    color: #666;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 14px;
-    margin-top: 40px;
 }
